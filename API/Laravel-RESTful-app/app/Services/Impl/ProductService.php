@@ -4,7 +4,7 @@ namespace App\Services\Impl;
 use App\Repositories\ProductRepositoryImpl;
 use App\Services\ProductServicelmpl;
 
-class ProductService extends ProductServicelmpl{
+class ProductService implements ProductServicelmpl{
     protected $productRepository;
 
     public function __construct(ProductRepositoryImpl $productRepository)

@@ -17,7 +17,11 @@ class SearchController extends Controller
         } else {
             $kq = 'Không tìm thấy ' .  $word;
         }
-        return view('future',compact('kq'));
+        $params = [
+            'kq' => $kq
+        ];
+        
+        return view('future',$params);
     }
     public function match(Request $request){
         $productDescription = $request->description;
@@ -25,7 +29,7 @@ class SearchController extends Controller
         $discountPercent = $request->percent;
         $discountAmount = $listPrice * $discountPercent * 0.01;
         $discountPrice = $listPrice * $discountAmount;
-    
+
         return view('show_discount_amount', compact('productDescription', 'listPrice', 'discountPercent', 'discountAmount', 'discountPrice'));
     }
 }

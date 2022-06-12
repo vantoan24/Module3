@@ -1,5 +1,5 @@
 <?php
-namespace App\Repositories\ProductImpl;
+namespace App\Repositories\Impl;
 
 use App\Models\Product;
 use App\Repositories\ProductRepositoryImpl;
